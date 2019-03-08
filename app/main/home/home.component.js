@@ -18,20 +18,22 @@
         return directive;
     }
 
-    HomeController.$inject = ['$timeout'];
+    HomeController.$inject = ['$timeout', 'homeServices'];
 
-    function HomeController($timeout) {
+    function HomeController($timeout, homeServices) {
         var vm = this;
-
         vm.title = 'HomeController';
+        vm.blogs = [];
 
-        activate();
+        init();
 
-        function activate() {
-            $timeout(function(){
-                vm.name = 'Jose';
-            }, 2000);
+        function init() {
+            vm.blogs = homeServices.getCalculation();
         }
+
+        vm.sum = function( item ){
+            return homeServices.add2Number(item.numberA, item.numberB);
+        };
     }
 })();
 

@@ -1,6 +1,13 @@
-<h2>Home Page</h2>
-<p>Hello from {{$ctrl.title}}</p>
-<input type="text" ng-model="$ctrl.name"/>
-<p ng-if="$ctrl.name">
-    Welcome {{$ctrl.name}}
-</p>
+<h2>Calculation List</h2>
+<br>
+<div class="row">
+    <div class="col-sm" ng-repeat="blog in $ctrl.blogs">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">{{blog.numberA + ' + ' + blog.numberB + ' = ' + $ctrl.sum(blog)}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
