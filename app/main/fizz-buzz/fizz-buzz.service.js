@@ -11,7 +11,7 @@
                 var BuzzNumner = 5;
                 var BuzzString = "Buzz";
 
-                self.getFizzBuzzByNumber = function( number ) {
+                self.convertNumberToFizzBuzz = function( number ) {
                     var stringResult = "";
                     var isFizz  = number % FizzNumber === 0;
                     var isBuzz = number % BuzzNumner === 0;
@@ -48,7 +48,7 @@
                     }
 
                     for (var i = 1; i <= toNumber; i++) {
-                        result.result += self.getFizzBuzzByNumber(i);
+                        result.result += self.convertNumberToFizzBuzz(i);
                     }
 
                     return result;
