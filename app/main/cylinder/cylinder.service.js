@@ -3,16 +3,16 @@
 
     angular
         .module('myApp.cylinder')
-        .service('cylinderService',[
-            function () {
+        .service('cylinderService',['numberService',
+            function (numberService) {
                 var self = this;
 
                 self.getVolume = function( radius, height ) {
-                    return self.getPerimeter(radius) * height + 2 * self.getBaseArea(radius);
+                    return numberService.roundNumber(self.getPerimeter(radius) * height + 2 * self.getBaseArea(radius), 2 );
                 };
 
                 self.getBaseArea = function( radius ) {
-                  return  Math.PI * radius * radius;
+                  return Math.round( Math.PI * radius * radius , 2);
                 };
 
                 self.getPerimeter = function( radius ) {
