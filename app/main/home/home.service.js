@@ -3,7 +3,7 @@
 
     angular
         .module('myApp.home')
-        .service('homeServices',[
+        .service('homeService',[
             function () {
                 var self = this;
 

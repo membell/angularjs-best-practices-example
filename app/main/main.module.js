@@ -7,7 +7,8 @@
             'footer',
             'navbar',
             'myApp.home',
-            'myApp.about'
+            'myApp.about',
+            'myApp.fizzbuzz'
         ])
         .config(Main);
 
