@@ -8,7 +8,8 @@
             'navbar',
             'myApp.home',
             'myApp.about',
-            'myApp.fizzbuzz'
+            'myApp.fizzbuzz',
+            'myApp.cylinder'
         ])
         .config(Main);
 
